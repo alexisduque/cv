@@ -34,8 +34,8 @@
 \ifdefined\@cv@print
   \colorlet{blue}{gray}
   \colorlet{red}{gray}
-  \colorlet{orange}{gray}
   \colorlet{green}{gray}
+  \colorlet{orange}{gray}
   \colorlet{purple}{gray}
   \colorlet{aquamarine}{gray}
   \colorlet{fillheader}{white}
@@ -126,8 +126,8 @@
       \ifcase\value{colorCounter}%
         blue\or%
         red\or%
-        orange\or%
         green\or%
+        orange\or%
         purple\or%
         aquamarine\else%
         headercolor\fi%
@@ -177,6 +177,30 @@
   }\\}
 
 %----------------------------------------------------------------------------------------
+% Publication environment %
+%----------------------------------------------------------------------------------------
+
+\setlength{\tabcolsep}{0pt}
+\newenvironment{publist}{%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+}{%
+  \end{tabular*}
+}
+\renewcommand{\bfseries}{\headingfont\color{headercolor}}
+\newcommand{\pub}[4]{%
+  \parbox[t]{12.8cm}{
+    #1, \textbf{#2}\\
+    in {\color{gray}\bodyfontit #3 }%
+     #4\\
+    %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+  }
+  %%#1&\parbox[t]{12.8cm}{%
+    %%\textbf{#2}%
+    %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    %#4\vspace{\parsep}%
+  %}\\}
+}
+%----------------------------------------------------------------------------------------
 % Side block %
 %----------------------------------------------------------------------------------------
 
@@ -205,6 +229,6 @@
 \RequirePackage{hyperref}
 \hypersetup{
     pdftitle=CV/Resume \textbar{} Alexis Duque,
-    pdfauthor=Alejandro Pérez Londoño,
+    pdfauthor=Alexis Duque,
     pdfsubject=CV/Resume%
     }
