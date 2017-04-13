@@ -5,7 +5,26 @@
                                     % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
 
 \sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut 
+\usepackage{etoolbox}
 
+\patchcmd{\header}
+{anchor=center}
+{anchor=center,text width=\textwidth,align=center}
+{}{}
+
+\patchcmd{\header}
+{minimum height=2cm}
+{minimum height=2.4cm}
+{}{}
+
+\patchcmd{\header}
+{{\thinfont #1}{\bodyfont  #2}}
+{{\thinfont #1}{\bodyfont  #2}\\[6pt]{\bodyfont\large Student in XXX Field at YYY University}}
+{}{}
+
+\apptocmd{\header}{\vskip2\parskip}{}{}
+
+\patchcmd{\aside}{(1, 1.87)}{(1, 2.4)}{}{}
 \begin{document}
 
 \header{Alexis}{Duque}           % Your name
@@ -60,7 +79,31 @@ GSM, 3G, LTE
 %	PUBLICATION SECTION
 
 
-%\section{skills}
+\section{Publications}
+ \vspace{-0.2cm}
+  
+\textbf{Communication dans des congrès} 
+
+\paragraph{Communication dans des congrès}
+dfdfdf
+dfdfdf
+
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+  {Conférences}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{Ingénieur R\&D - Doctorant}\\
+  Sujet de thèse : Visible Light Communications in a Smart City environment\\ 
+  Localisation précise en interieur en utilisant un smartphone\\
+  Développement d'objets communicants grâce à la lumière visible}
+%------------------------------------------------
+\end{entrylist}
+
+
+
 %  \vspace{-0.2cm}
 
 %----------------------------------------------------------------------------------------
