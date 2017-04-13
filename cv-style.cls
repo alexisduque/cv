@@ -15,6 +15,7 @@
 %----------------------------------------------------------------------------------------
 
 \RequirePackage{xcolor}
+\RequirePackage{needspace}
 
 \definecolor{white}{RGB}{255,255,255}
 
