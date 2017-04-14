@@ -2,7 +2,7 @@ TITLE = cv-*
 FILE = cv-*.tex
 NAME = cv
 GRAPHIC_DIR = figures
-PDFLATEX = xelatex ${FILE} 
+PDFLATEX = xelatex cv-en.tex && xelatex cv-fr.tex
 BIBER = bibtex ${OUTPUT}/${FILE}
 OUTPUT = .
 # Finding the required images
@@ -53,9 +53,11 @@ import:
 	rsync -L ~/Documents/library.bib ./
 
 open:
-	xdg-open ${TITLE}.pdf
+	xdg-open cv-fr.pdf
+	xdg-open cv-en.pdf
 
 _pre:
+	${PDFLATEX}
 	${PDFLATEX}
 
 _bib:
