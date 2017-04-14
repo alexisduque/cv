@@ -77,5 +77,5 @@ log:
 	grep --color=always Warn ${OUTPUT}/*.log || exit 0
 
 upload:
-	./dropbox_uploader.sh upload cv-fr.pdf cv-fr.pdf
-	./dropbox_uploader.sh upload cv-en.pdf cv-en.pdf
+	./dropbox_uploader.sh -f .dropbox_uploader upload cv-fr.pdf cv-fr.pdf
+	./dropbox_uploader.sh -f .dropbox_uploader upload cv-en.pdf cv-en.pdf
