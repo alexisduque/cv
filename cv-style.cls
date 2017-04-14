@@ -189,7 +189,7 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\pub}[4]{%
-  \parbox[t]{12.8cm}{
+  \parbox[t]{14.8cm}{
     #1, \textbf{#2}\\
     in {\color{gray}\bodyfontit #3 }%
      #4\\

@@ -2,7 +2,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_ad1fe0ab673f_key -iv $encrypted_ad1fe0ab673f_iv
   -in dropbox_uploader.sh.enc -out dropbox_uploader.sh -d
 install:
-- sudo apt-get install texlive-latex-recommended textlive-xetex texlive-latex-extra
+- sudo apt-get install texlive-latex-recommended texlive-xetex texlive-latex-extra
   texlive-fonts-recommended
 - sudo apt-get install chktex
 script:
