@@ -56,6 +56,11 @@ open:
 	xdg-open cv-fr.pdf
 	xdg-open cv-en.pdf
 
+lint:
+	chktex -W
+	chktex -q -n 6 *.tex chapters.*.tex 2>/dev/null | tee lint.out
+	test ! -s lint.out
+
 _pre:
 	${PDFLATEX}
 	${PDFLATEX}
@@ -70,3 +75,7 @@ _post:
 
 log:
 	grep --color=always Warn ${OUTPUT}/*.log || exit 0
+
+upload:
+	./dropbox_uploader.sh upload cv-fr.pdf cv-fr.pdf
+	./dropbox_uploader.sh upload cv-en.pdf cv-en.pdf
