@@ -2,7 +2,7 @@ TITLE = cv-*
 FILE = cv-*.tex
 NAME = cv
 GRAPHIC_DIR = figures
-PDFLATEX = xelatex cv-en.tex && xelatex cv-fr.tex
+PDFLATEX = xelatex cv-en.tex && xelatex cv-fr.tex && xelatex cv-en-mobicom.tex
 BIBER = bibtex ${OUTPUT}/${FILE}
 OUTPUT = .
 # Finding the required images
