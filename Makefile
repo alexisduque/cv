@@ -55,6 +55,7 @@ import:
 open:
 	xdg-open cv-fr.pdf
 	xdg-open cv-en.pdf
+	xdg-open cv-en-mobicom.pdf
 
 lint:
 	chktex -W
