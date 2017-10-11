@@ -80,3 +80,4 @@ log:
 upload:
 	./dropbox_uploader.sh -f .dropbox_uploader upload cv-fr.pdf cv-fr.pdf
 	./dropbox_uploader.sh -f .dropbox_uploader upload cv-en.pdf cv-en.pdf
+	./dropbox_uploader.sh -f .dropbox_uploader upload cv-en-mobicom.pdf cv-en-mobicom.pdf
