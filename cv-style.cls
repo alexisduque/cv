@@ -195,12 +195,29 @@
      #4\\
     %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
   }
+}
+\newcommand{\pat}[5]{%
+  \parbox[t]{14.8cm}{
+    #1. #2. \textbf{#3}\\
+    {\color{gray}\bodyfontit #4, #5}\\
+    %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+  }
+}
+%Hunt, Lewis. 1992. Three zone bed cover with an inflatable human form. U.S. Patent 5,146,634, filed September 11, 1991,
+
+\newcommand{\prez}[3]{%
+  \parbox[t]{14.8cm}{
+    \textbf{#1}, {\color{gray}\bodyfontit #2, #3 }%
+     \\
+    %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+  }
+}
   %%#1&\parbox[t]{12.8cm}{%
     %%\textbf{#2}%
     %{\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     %#4\vspace{\parsep}%
   %}\\}
-}
+
 %----------------------------------------------------------------------------------------
 % Side block %
 %----------------------------------------------------------------------------------------

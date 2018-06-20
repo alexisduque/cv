@@ -12,9 +12,9 @@ FIGTEX	:= $(FIGSRC:%.svg=%.pdf_tex)
 
 .PHONY: all, bib, _main, _bib
 
-all: build open
+all: build
 
-build: pdf log
+build: pdf
 
 #bib: _bib
 bib: _bib _post
