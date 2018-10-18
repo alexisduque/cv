@@ -2,7 +2,7 @@ TITLE = cv-*
 FILE = cv-*.tex
 NAME = cv
 GRAPHIC_DIR = figures
-PDFLATEX = xelatex cv-en.tex && xelatex cv-fr.tex && xelatex cv-en-mobicom.tex
+PDFLATEX = xelatex cv-en.tex && xelatex cv-fr.tex #&& xelatex cv-en-mobicom.tex
 BIBER = bibtex ${OUTPUT}/${FILE}
 OUTPUT = .
 # Finding the required images
@@ -55,7 +55,7 @@ import:
 open:
 	xdg-open cv-fr.pdf
 	xdg-open cv-en.pdf
-	xdg-open cv-en-mobicom.pdf
+	#xdg-open cv-en-mobicom.pdf
 
 lint:
 	chktex -W
@@ -80,4 +80,4 @@ log:
 upload:
 	./dropbox_uploader.sh -f .dropbox_uploader upload cv-fr.pdf cv-fr.pdf
 	./dropbox_uploader.sh -f .dropbox_uploader upload cv-en.pdf cv-en.pdf
-	./dropbox_uploader.sh -f .dropbox_uploader upload cv-en-mobicom.pdf cv-en-mobicom.pdf
+	#./dropbox_uploader.sh -f #.dropbox_uploader upload cv-en-mobicom.pdf cv-en-mobicom.pdf
