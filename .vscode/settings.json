@@ -2,5 +2,10 @@
 {
     "latexCompile.compiler": "xelatex",
     "latex-preview.command": "xelatex",
-    "latex-workshop.compiler": "xelatex"
+    "latex-workshop.compiler": "xelatex",
+    "latex-workshop.view.pdf.external.viewer.command": "open",
+    "latex-workshop.view.pdf.external.viewer.args": [
+        "-a Preview",
+        "%PDF%"
+    ]
 }
