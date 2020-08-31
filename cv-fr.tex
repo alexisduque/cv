@@ -1,0 +1,308 @@
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
+
+\documentclass[]{cv-style}          % Add 'print' as an option into the square bracket to remove colours from this template for printing. 
+                                    % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
+
+\sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut 
+
+\usepackage{etoolbox}
+
+\patchcmd{\header}
+{anchor=center}
+{anchor=center,text width=\textwidth,align=center}
+{}{}
+
+\patchcmd{\header}
+{minimum height=2cm}
+{minimum height=2.4cm}
+{}{}
+
+\patchcmd{\header}
+{{\thinfont #1}{\bodyfont  #2}}
+{{\thinfont #1}{\bodyfont  #2}\\[6pt]{\bodyfont\large PhD - Directeur Recherche et Développement}}
+{}{}
+
+\apptocmd{\header}{\vskip2\parskip}{}{}
+
+\patchcmd{\aside}{(1, 1.87)}{(1, 2.4)}{}{}
+\begin{document}
+
+\header{Alexis}{Duque}           % Your name
+\lastupdated
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+
+\begin{aside}
+%
+\section{Contact}
+64 rue Lucette et René Desgrand
+6100, Villeurbanne
+France
+~
++33 6 51 24 37 76
+~
+alexisd61@gmail.com
+alexisd@rtone.fr
+alexis.duque@insa-lyon.fr
+%
+\section{Langues}
+Anglais, professionnel
+{\color{red} $\varheartsuit$} Espagnol, bilingue
+Mandarin, notions
+%
+\section{Programmation}
+{\color{red} $\varheartsuit$} C/C++, Java, JS
+Android SDK and NDK
+Objective C, Swift
+Embedded Linux
+STM32 MCU
+ARM Cortex M0+, M3
+Contiki, RIOT
+Angular, Node, Cordova
+PHP, Symfony2/3, Laravel
+SQL, Bash, Python
+Docker, Jenkins, Agile
+Git, \LaTeX{}
+%
+\section{Réseaux}
+{\color{red} $\varheartsuit$} VLC - 802.15.7
+{\color{red} $\varheartsuit$} Bluetooth LE
+802.15.4, 6LoWPAN
+LPWAN, LoRa, Sigfox
+{\color{red} $\varheartsuit$} Sécurité, Forensics
+\end{aside}
+
+%  \vspace{-0.2cm}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+ \vspace{0.15cm}
+
+\section{Expériences Professionnelles}
+
+\begin{entrylist}
+\entry
+  {Depuis 2017}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{Responsable R\&D et Sécurité}\\
+  Responsable technique de l'offre de conseil et audit de sécurité pour l'Internet des Objets.\\
+  Gestion de projets collaboratif : SME Instrument, Eurostars, ANR, FUI PACLIDO (Protocoles et Algo. Crypto. pour l'IoT)\\
+}
+%------------------------------------------------
+\entry
+  {2015-2018}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{Doctorant}\\
+  Sujet de thèse : Bidirectional Visible Light Communications for the Internet of Things\\ 
+  Développement d'objets communicants grâce à la lumière visible et un smartphone\\
+  Redaction et dépôt d'un brevet à l'INPI et l'EPO (European Patent Office)\\
+ }
+%------------------------------------------------
+\entry
+  {2014-2017}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{Ingénieur R\&D Systèmes Embarqué}\\
+  Programmation sur micro-contrôleurs:
+  \begin{itemize}
+    \item Développement d'un Body-Area-Network pour un contexte sportif (802.15.4)
+    \item Mode Low Power et optimisation de la consommation énergétique
+    \item STM32. ARM Cortex M0+, M0, M3. TI MSP430
+  \end{itemize}
+  Développement de firmwares Bluetooth Low Energy sur SoC Nordic et Bluegiga.\\
+  Conception d'une passerelle 3G Linux Embarqué: C++, Projet Yocto\\
+  Applications mobiles :
+  \begin{itemize}
+    \item Expertise sur Bluetooth Low Energy
+    \item Communication par Ultrasons
+    \item iOS 8 en Objective C ou Swift
+    \item Android SDK et NDK
+    \item Cross plateforme avec Apache Cordova, Ionic, AngularJS
+  \end{itemize}
+  Applications Web :
+  \begin{itemize}
+    \item Évolutions et améliorations de plusieurs applications web Java dans le milieu de l'Internet des Objets (Spring, Hibernate, GWT, OSGI)
+  \end{itemize}}
+%------------------------------------------------
+ \entry
+  {S1 2015 }
+  {ENTEL, Universidad Politecnica de Cataluna}
+  {Barcelone, Espagne}
+  {\jobtitle{Light sensor development for the Ara platform}\\
+  Projet de recherche au sein de l'équipe Wireless Network Group, 5 mois :
+  \begin{itemize}
+    \item Etat de l'art et veille sur Visible Light Communications (VLC)
+    \item Etude de la plate-forme de développement du smartphone modulaire Ara
+    \item Conception du circuit électronique d'un récepteur pour la communication par modulation lumineuse. Développement C et Android (SDK et NDK)
+	\item Rédaction d'un mémoire de recherche
+  \end{itemize}}
+%------------------------------------------------
+\entry
+  {Depuis 2013}
+  {Développeur Freelance}
+  {Lyon, France}
+  {\jobtitle{Développeur Web et Mobile}\\
+  Développement d'applications web et mobiles en utilisant des technologies comme Java, Swift, Symphony2/3, Angular, Polymer\\
+  Exemple de projets:
+  \begin{itemize}
+    \item Développement d'une application Android d'aide à conduite de réunion \\ (Laboratoire TechCico , Université Technologique de Troyes)
+    \item Conception de l’outil de reporting énergétique de l'usine Michelin Troyes
+    \item Conception et développement d'une applications web de dimensionnement de systèmes de protection incendie en suivant les norme NF, NFPA et APSADR1.
+    \item Développement d'un système de dossier médical électronique basé sur OpenMRS et Bahmni
+  \end{itemize}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\pagebreak
+\section{Formation}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2015--2018}
+{PhD. {\normalfont Bidirectional Visible Light Communications for the Internet of Things}}
+{CITI Lab}
+{\bodyfontit{Equipe INRIA AGORA, contrat CIFRE avec Rtone}}
+%------------------------------------------------
+\entry
+{2009--2015}
+{Ing. {\normalfont mention Télécommunications, Services et Usages.}}
+{INSA de Lyon}
+{\bodyfontit{Semestre ERASMUS à l'UPC-ETSETB, Barcelone, Espagne} \\
+\bodyfontit{2 ans en section internationale Asie. Stage ouvrier de 2 mois à Shanghai, Chine}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	OTHER QUALIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{other qualifications}
+
+%\begin{entrylist}
+%------------------------------------------------
+%\entry
+%{2013}
+%{Qualification}
+%{Institution}
+%{\vspace{-0.3cm}}
+%------------------------------------------------
+%\entry
+%{2011}
+%{Qualification}
+%{Institution}
+%{\vspace{-0.3cm}}
+%------------------------------------------------
+%\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{awards}
+
+%\begin{entrylist}
+%------------------------------------------------
+%\entry
+%{2014}
+%{Google Summer of Code Student}
+%{OpenMRS}
+%{Open Source contributor at OpenMRS in the framework of Google Summer of Code fellowship. }
+%------------------------------------------------
+%\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+\needspace{5\baselineskip}
+\section{Publications}
+ \vspace{-0.2cm}
+\large{\textbf{Articles dans des conférences académiques}}
+
+\normalsize
+\begin{publist}
+%------------------------------------------------
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Performance Evaluation of LED-to-Camera Communications”}
+{Proceedings of the 22nd ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems}
+{MSWiM’19, (Miami Beach, FL, USA)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, C. Goursaud, and A. Desportes}
+{“Poster: Insights into RGB-LED to Smartphone Communication”}
+{Proceedings of the 2018 International Conference on Embedded Wireless Systems and Networks}
+{EWSN’18, (Madrid, Spain)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Decoding methods in LED-to-smartphone bidirectional communication for the IoT”}
+{Proceedings of the 2018 Global LIFI Congress (GLC)}
+{GLC’18, (Paris, France)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“SeedLight: Hardening LED-to-Camera Communication with Random Linear Coding”}
+{Proceedings of the 4th Workshop on Visible Light Communication System}
+{VLCS’17, (Snowbird, Utah, USA)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Demo: Off-the-shelf bi-directional visible light communication module for IoT devices and smartphones”}
+{Proceedings of the 2017 International Conference on Embedded Wireless Systems and Networks}
+{EWSN’17, (Uppsala, Sweden)}\\
+\pub
+  {A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+  {“Unleashing the power of led- to-camera communications for iot devices”}
+  {Proceedings of the 3rd Workshop on Visible Light Communication System}
+  {VLCS’16, (New York, NY, USA)}\\
+\pub
+  {A. Duque, R. Stanica, H. Rivano, and A. Desportes} {“Demo: Unleashing the power of led- to-camera communications for iot devices”} {Proceedings of the 3rd Workshop on Visible Light Communication Systems} {VLCS’16, (New York, NY, USA)}
+\end{publist}
+
+%------------------------------------------------
+
+\large{\textbf{Brevets}}
+
+\normalsize
+\begin{publist}
+%------------------------------------------------
+\pat
+{A. Duque, A. Desportes,  R. Stanica, H. Rivano}
+{2017}
+{"Procédés de communication en lumière visible"}
+{Brevet Européen N° EP18157382}
+{Date de Priorité : 17 février 2017}
+\\
+\end{publist}
+
+% \large{\textbf{Présentations dans des conférences IT}}
+
+% \normalsize
+% \begin{publist}
+% %------------------------------------------------
+% \prez
+% {A. Duque, A. Desportes,  R. Stanica, H. Rivano}
+% {2017}
+% {"Procédés de communication en lumière visible"}
+% {Brevet Européen N° : EP18157382}
+% {Date de Priorité : 17 février 2017}
+% \\
+% \end{publist}
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Centres d'interêt}
+  \vspace{-0.2cm}
+  
+\textbf{Professionnel :} veille technologique,  contributeur open-source sur le projet OpenMRS, participation au Google Summer of Code 2014 et 2016 \\
+\textbf{Sport :} duathlon, cyclisme, athlétisme (niveau national) \\
+\textbf{Culture :} lecture, pratique de la guitare
+%----------------------------------------------------------------------------------------
+\end{document}

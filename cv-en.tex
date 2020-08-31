@@ -1,0 +1,337 @@
+% -- Encoding UTF-8 without BOM
+% -- XeLaTeX => PDF (BIBER)
+
+\documentclass[]{cv-style}          % Add 'print' as an option into the square bracket to remove colours from this template for printing.
+                                    % Add 'espanol' as an option into the square bracket to change the date format of the Last Updated Text
+
+\sethyphenation[variant=british]{english}{} % Add words between the {} to avoid them to be cut
+\usepackage{etoolbox}
+
+\patchcmd{\header}
+{anchor=center}
+{anchor=center,text width=\textwidth,align=center}
+{}{}
+
+\patchcmd{\header}
+{minimum height=2cm}
+{minimum height=2.4cm}
+{}{}
+
+\patchcmd{\header}
+{{\thinfont #1}{\bodyfont  #2}}
+{{\thinfont #1}{\bodyfont  #2}\\[6pt]{\bodyfont\large PhD - Director of Research}}
+{}{}
+
+\apptocmd{\header}{\vskip2\parskip}{}{}
+
+\patchcmd{\aside}{(1, 1.87)}{(1, 2.4)}{}{}
+
+\begin{document}
+
+\header{Alexis}{Duque}           % Your name
+\lastupdated
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION  -- In the aside, each new line forces a line break
+%----------------------------------------------------------------------------------------
+
+\begin{aside}
+%
+\section{contact}
+64 rue Lucette et René Desgrand
+69100, Villeurbanne
+France
+~
++33 6 51 24 37 76
+~
+alexisd61@gmail.com
+alexis.duque@rtone.fr
+% alexis.duque@insa-lyon.fr
+%
+\section{languages}
+French mother tongue
+English fluency
+{\color{red} $\varheartsuit$} Spanish bilingual
+Mandarin basic
+%
+\section{research interests}
+{\color{red} $\varheartsuit$} Internet of Things
+Visible Light Comm.
+Machine Learning
+{\color{red} $\varheartsuit$} Bluetooth LE
+Software Defied Radio
+Lightweight Crypto.
+{\color{red} $\varheartsuit$} IoT Cybersecurity
+Wireless Comm.
+%
+\section{programming}
+{\color{red} $\varheartsuit$} C/C++, Golang
+Python, Jupyter, TensorFlow, TensorFlow Lite
+Java, Kotlin
+Android SDK/NDK
+Swift\& iOS SDK
+{\color{red} $\varheartsuit$} Embedded Linux \& Android
+ARM Cortex M MCUs
+Zephyr, Contiki, RIOT
+Docker, SysAdmin, Agile
+{\color{red} $\varheartsuit$} Git, Gitlab, CI/CD
+\LaTeX{}
+%
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+
+
+%\section{skills}
+%  \vspace{-0.2cm}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\vspace{0.15cm}
+\section{work experience}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2017--Now}
+{Rtone}
+{Lyon, France}
+{\jobtitle{Director of Research - Cybersecurity Leader}\\
+Research project management: H2020, SME Instrument, Eurostars, ANR\\
+Ongoing projects:
+\begin{itemize}
+    \item FUI PACLIDO (2017-20): Lightweight Cryptography for IoT. Detection of cyberattack on IoT devices using Machine Learning
+    \item H2020 SDR4IoT (2020-21): IoT devices authentication and fingerprinting with Software Defined Radio and Machine Learning
+    \item ANACONDA (2020-2022): Automation of IoT device cybersecurity assessment
+\end{itemize}
+IoT Cybersecurity consulting\\
+Speaker in international tech conferences: Devoxx (FR/BE/MA), FOSDEM, MixIT, ...\\
+Technical writing
+}
+%------------------------------------------------
+\entry
+  {2015--2018}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{PhD student}\\
+  PhD.: Bidirectional Visible Light Communications for
+ the Internet of Things\\
+  Working toward bi-directionnal Device-to-Device communication using LED lights and smartphones. European patent granted}
+%------------------------------------------------
+\entry
+  {2014-- 2017}
+  {Rtone}
+  {Lyon, France}
+  {\jobtitle{Embedded Software and Research Engineer}\\
+  Micro-controller programming:
+  \begin{itemize}
+    \item Body-Area-Network development in a sport context (802.15.4)
+    \item Low Power management and optimization
+    \item STM32, ARM Cortex M0+, M0 and M3
+  \end{itemize}
+  Bluetooth Low Energy firmware development on Nordic, Bluegiga SoC\\
+  Embedded Linux 3G Gateway: C++, Yocto Project\\
+  Mobile Applications :
+  \begin{itemize}
+    \item Bluetooth Low Energy, Ultrasounds
+    \item iOS SDK using Objective C and Swift
+    \item Android SDK and NDK
+    \item Cross-platform using Apache Cordova and Ionic
+  \end{itemize}
+  Web Applications :
+  \begin{itemize}
+    \item Evolution and improvement of various Java WebApp (Spring, Hibernate, GWT)
+    \item OSGI Bundle development for the Eclipse Kura project using Eclipse Equinox
+  \end{itemize}}
+%------------------------------------------------
+ \entry
+  {H1 2015  }
+  {ENTEL, Universidad Politecnica de Cataluna}
+  {Barcelona, Spain}
+  {\jobtitle{Light sensor development for the Ara platform}\\
+  Research project within the Wireless Network Group, 5 months :
+  \begin{itemize}
+    \item Visible Light Communications (VLC) state of the art
+    \item Development of a VLC front-end for the Google Ara modular smartphone
+    \item Hardware design and firmware programming in C
+    \item Android SDK and NDK programming
+  \end{itemize}}
+%------------------------------------------------
+\entry
+  {2013-- Now}
+  {Freelance Developer}
+  {Lyon, France}
+  {\jobtitle{Mobile and Web applications developer}\\
+  Various mobile and web applications development using technologies such as Java, Swift, Symphony2/3, Angular, Polymer\\\
+  Most relevant projects:
+  \begin{itemize}
+    \item Meeting reporting Android application for a knowledge management project (TechCico Laboratory, Université Technologique de Troyes)
+    \item Intranet web application enabling energy consumption monitoring in a factory (Michelin Troyes)
+    \item Web Application allowing fire protection system scaling and planning
+    \item Electronic medical recording system development based on OpenMRS and Bahmni
+  \end{itemize}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\pagebreak
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2015--2018}
+{PhD. {\normalfont Bidirectional Visible Light Communications for the Internet of Things}}
+{CITI Lab}
+{\bodyfontit{INRIA AGORA Team, funded by Rtone (French CIFRE fellowship)}}
+%------------------------------------------------
+\entry
+{2009--2015}
+{M.Eng. {\normalfont in Computer Science and Telecommunications.}}
+{INSA de Lyon}
+{\bodyfontit{Fifth year final semester abroad at the UPC-ETSETB, Spain} \\
+\bodyfontit{First two years in Asian international section}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+\needspace{5\baselineskip}
+\section{publications}
+ \vspace{-0.2cm}
+\large{\textbf{Journals and international conferences proceedings}}
+
+\normalsize
+\begin{publist}
+%------------------------------------------------
+\pub
+{A. Duque, A. Lahmadi, N. Heraief, and J. Francq}
+{“MitM Attack Detection in BLE Networks using Reconstruction and Classification Machine Learning Techniques”}
+{Proceedings of the 2nd Workshop on Machine Learning for Cybersecurity}
+{MLCS’20, (Ghent, Belgium)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Analytical and simulation tools for optical camera communications”}
+{Elsevier Computer Communications}
+{Vol. 120, pp. 52-62, July 2020}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Performance Evaluation of LED-to-Camera Communications”}
+{Proceedings of the 22nd ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems}
+{MSWiM’19, (Miami Beach, FL, USA)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, C. Goursaud, and A. Desportes}
+{“Poster: Insights into RGB-LED to Smartphone Communication”}
+{Proceedings of the 2018 International Conference on Embedded Wireless Systems and Networks}
+{EWSN’18, (Madrid, Spain)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Decoding methods in LED-to-smartphone bidirectional communication for the IoT”}
+{Proceedings of the 2018 Global LIFI Congress (GLC)}
+{GLC’18, (Paris, France)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“SeedLight: Hardening LED-to-Camera Communication with Random Linear Coding”}
+{Proceedings of the 4th Workshop on Visible Light Communication System}
+{VLCS’17, (Snowbird, Utah, USA)}\\
+\pub
+{A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+{“Demo : Off-the-shelf bi-directional visible light communication module for IoT devices and smartphones”}
+{Proceedings of the 2017 International Conference on Embedded Wireless Systems and Networks}
+{EWSN’17, (Uppsala, Sweden), 2017}\\
+\pub
+  {A. Duque, R. Stanica, H. Rivano, and A. Desportes}
+  {“Unleashing the power of led- to-camera communications for iot devices”}
+  {Proceedings of the 3rd Workshop on Visible Light Communication System}
+  {VLCS’16, (New York, NY, USA)}\\
+\pub
+  {A. Duque, R. Stanica, H. Rivano, and A. Desportes} {“Demo: Unleashing the power of led- to-camera communications for iot devices”} {Proceedings of the 3rd Workshop on Visible Light Communication Systems} {VLCS’16, (New York, NY, USA)}
+\end{publist}
+
+\large{\textbf{Patents}}
+
+\normalsize
+\begin{publist}
+%------------------------------------------------
+\pat
+{A. Duque, A. Desportes,  R. Stanica, H. Rivano}
+{2017}
+{"Procédés de communication en lumière visible"}
+{European Patent N° EP18157382}
+{Priority Date: February 17th 2017}
+\\
+\end{publist}
+\newpage
+\large{\textbf{Technical press}}
+
+\normalsize
+\begin{publist}
+%------------------------------------------------
+\pub
+  {A. Duque} {“TensorFlow Lite im Vertical Farming”} {Linux Magazin } {April 2020}\\
+\pub
+  {A. Duque} {“Run TensorFlow models on edge devices”} {ADMIN Magazine} {Issue 57, May 2020}\\
+\pub
+  {A. Duque} {“Machine Learning sur des objets connectés avec TensorFlow Lite pour l’agriculture verticale”} {Linux Magazine France} {Issue 236, July 2020}
+  
+%------------------------------------------------
+\end{publist}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	OTHER QUALIFICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{other qualifications}
+
+%\begin{entrylist}
+%------------------------------------------------
+%\entry
+%{2013}
+%{Qualification}
+%{Institution}
+%{\vspace{-0.3cm}}
+%------------------------------------------------
+%\entry
+%{2011}
+%{Qualification}
+%{Institution}
+%{\vspace{-0.3cm}}
+%------------------------------------------------
+%\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{certifications \& awards}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{June 2020}
+{TensorFlow Developer Certificate}
+{Google}
+{ID 8TGQMHD85RS7 \\ Integrating machine learning into tools and applications. Understanding of building TensorFlow models using Computer Vision, Convolutional Neural Networks, Natural Language Processing, and real-world image data and strategies.}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{interests}
+  \vspace{-0.2cm}
+
+\textbf{professional :} technological watch,  free and open-source software activist, contributor at OpenMRS, Google Summer of Code 2014 and 2016 student\\
+\textbf{sport :} triathlon, duathlon, cycling, athletics \\
+\textbf{culture :} reading, practicing the classical and electric guitar
+%----------------------------------------------------------------------------------------
+\end{document}
